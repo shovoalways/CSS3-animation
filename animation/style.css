@@ -1,0 +1,48 @@
+#animation {
+  background: #080a3c;
+  height: 500px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+#animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/footer-shape1.png);
+  animation: imgChange 1s linear 1s infinite;
+}
+#animation::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/footer-shape2.png);
+  animation: imgChangeTwo 1s linear 1s infinite;
+}
+@keyframes imgChange {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes imgChangeTwo {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
